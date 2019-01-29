@@ -25,11 +25,19 @@ export const ROUTES: Routes = [
       title: '页面3',
       isRemove: true
     }
+  },
+  {
+    path: 'tree-grid',
+    loadChildren: './pages/tree-grid/tree-grid.module#TreeGridModule',
+    data: {
+      title: 'tree-grid',
+      isRemove: true
+    }
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(ROUTES,{useHash:true})],
+  imports: [RouterModule.forRoot(ROUTES, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
