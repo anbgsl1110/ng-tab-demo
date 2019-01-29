@@ -3,7 +3,7 @@ import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 import {SimpleReuseStrategy} from '../../service/SimpleReuseStrategy';
 
-import { filter,map,mergeMap } from 'rxjs/operators';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tab',

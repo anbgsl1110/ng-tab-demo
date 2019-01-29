@@ -8,6 +8,15 @@ export class SimpleReuseStrategy implements RouteReuseStrategy {
   public static handlers: { [key: string]: DetachedRouteHandle } = {};
   private static waitDelete: string;
 
+  public static deleteRouteSnapshot(url: string): void {
+    const key = url.replace(/\//g, '_');
+    if (SimpleReuseStrategy.handlers[key]) {
+      delete SimpleReuseStrategy.handlers[key];
+    } else {
+      SimpleReuseStrategy.waitDelete = key;
+    }
+  }
+
   /** 表示对所有路由允许复用 如果你有路由不想利用可以在这加一些业务逻辑判断 */
   public shouldDetach(route: ActivatedRouteSnapshot): boolean {
     return true;
@@ -45,14 +54,5 @@ export class SimpleReuseStrategy implements RouteReuseStrategy {
 
   private getRouteUrl(route: ActivatedRouteSnapshot) {
     return route['_routerState'].url.replace(/\//g, '_');
-  }
-
-  public static deleteRouteSnapshot(url: string): void {
-    const key = url.replace(/\//g, '_');
-    if (SimpleReuseStrategy.handlers[key]) {
-      delete SimpleReuseStrategy.handlers[key];
-    } else {
-      SimpleReuseStrategy.waitDelete = key;
-    }
   }
 }

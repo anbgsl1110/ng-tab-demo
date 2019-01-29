@@ -14,7 +14,6 @@ export class SidebarComponent implements OnInit {
 
   /**
    * 路由方式添加tab
-   * @param data
    */
   tabs(data) {
     this.router.navigate([data]);
