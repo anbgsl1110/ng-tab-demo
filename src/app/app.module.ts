@@ -3,13 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {NgZorroAntdModule} from "ng-zorro-antd";
+import { HeaderComponent } from './layout/header/header/header.component';
+import { SidebarComponent } from './layout/header/sidebar/sidebar.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    NgZorroAntdModule,
     AppRoutingModule
   ],
   providers: [],
