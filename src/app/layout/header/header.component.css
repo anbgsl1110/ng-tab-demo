@@ -1,5 +1,8 @@
+.demo-title{
+  text-align: right;
+  margin-right: 20px;
+}
+
 .header{
-  height: 50px;
-  width: 100%;
-  background: lightskyblue;
+  height: 10px;
 }

@@ -1,21 +1,39 @@
-<div class="sidebar">
-  <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
+<div class="sidebar" style="width:200px;height:785px;line-height:100px;overflow:auto;overflow-x:hidden;">
+  <ul nz-menu [nzMode]="'inline'" >
     <li nz-submenu>
-      <span title>系统管理</span>
+      <span title>菜单管理</span>
       <ul>
         <li nz-menu-item (click)="tabs('tree-grid')">tree-grid-demo</li>
         <li nz-menu-item (click)="tabs('page1')">demo页面1</li>
         <li nz-menu-item (click)="tabs('page2')">demo页面2</li>
-        <li nz-menu-item (click)="tabs('page3')">demo页面3</li>
-        <li nz-menu-item (click)="tabs('page1')">demo页面1</li>
-        <li nz-menu-item (click)="tabs('page2')">demo页面2</li>
-        <li nz-menu-item (click)="tabs('page3')">demo页面3</li>
-        <li nz-menu-item (click)="tabs('page1')">demo页面1</li>
-        <li nz-menu-item (click)="tabs('page2')">demo页面2</li>
-        <li nz-menu-item (click)="tabs('page3')">demo页面3</li>
-        <li nz-menu-item (click)="tabs('page1')">demo页面1</li>
-        <li nz-menu-item (click)="tabs('page2')">demo页面2</li>
-        <li nz-menu-item (click)="tabs('page3')">demo页面3</li>
+        <li nz-submenu>
+          <span title>demo模块1</span>
+          <ul>
+            <li nz-menu-item (click)="tabs('page3')">demo页面3</li>
+            <li nz-menu-item (click)="tabs('page1')">demo页面4</li>
+          </ul>
+        </li>
+        <li nz-menu-item (click)="tabs('page2')">demo页面5</li>
+        <li nz-menu-item (click)="tabs('page3')">demo页面6</li>
+        <li nz-menu-item (click)="tabs('page1')">demo页面7</li>
+        <li nz-menu-item (click)="tabs('page2')">demo页面8</li>
+        <li nz-menu-item (click)="tabs('page3')">demo页面9</li>
+        <li nz-menu-item (click)="tabs('page1')">demo页面10</li>
+        <li nz-submenu>
+          <span title>demo模块2</span>
+          <ul>
+            <li nz-menu-item (click)="tabs('page2')">demo页面11</li>
+            <li nz-menu-item (click)="tabs('page3')">demo页面12</li>
+            <li nz-menu-item (click)="tabs('page3')">demo页面13</li>
+          </ul>
+        </li>
+        <li nz-menu-item (click)="tabs('page1')">demo页面14</li>
+        <li nz-menu-item (click)="tabs('page2')">demo页面15</li>
+        <li nz-menu-item (click)="tabs('page3')">demo页面16</li>
+        <li nz-menu-item (click)="tabs('page3')">demo页面17</li>
+        <li nz-menu-item (click)="tabs('page1')">demo页面18</li>
+        <li nz-menu-item (click)="tabs('page2')">demo页面19</li>
+        <li nz-menu-item (click)="tabs('page3')">demo页面20</li>
       </ul>
     </li>
   </ul>

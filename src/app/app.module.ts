@@ -3,13 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouteReuseStrategy} from '@angular/router';
 import {SimpleReuseStrategy} from './service/SimpleReuseStrategy';
 import { TabComponent } from './common/tab/tab.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -22,10 +28,14 @@ import { TabComponent } from './common/tab/tab.component';
     BrowserModule,
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    NgZorroAntdModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: SimpleReuseStrategy }
+    { provide: RouteReuseStrategy, useClass: SimpleReuseStrategy },
+    { provide: NZ_I18N, useValue: zh_CN }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,17 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<div class="content">
-  <app-tab>
-    <router-outlet></router-outlet>
-  </app-tab>
-</div>
+<nz-layout class="layout">
+  <nz-header style="background-color: lightskyblue">
+    <app-header></app-header>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" style="background:#fff">
+      <app-sidebar></app-sidebar>
+    </nz-sider>
+    <nz-content style="margin-right: 20px">
+      <div class="content">
+        <app-tab>
+          <router-outlet></router-outlet>
+        </app-tab>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
